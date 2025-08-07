@@ -9,15 +9,16 @@ clc;
 T =1000; %no. of trials per dyad
 D = 100; %no. of dyads
 beta = [0:0.01:0.1]; %Penalizing parameter
-Bias = 0; %Builder's sampling bias --> set Bias = 0, if builder should sample actions at random
+Bias = 0; %Builder's sampling bias --> set Bias = 0, if builder should sample actions at random, otherwise set to 1
 
 %Actions
-%action = {'ABCD EFGH IJKY', 'ABCD EFGH IJKX', 'ABCD EFGH IJKZ', 'ABCD EFGH IJKQ'};
 action = {'ABCD EFKL IJMN','ABCD EFOP IJQR', 'ABCD EFST IJUV', 'ABCD EFWX IJYZ'};
+%action = {'ABCD EFGH IJKY', 'ABCD EFGH IJKX', 'ABCD EFGH IJKZ', 'ABCD EFGH IJKQ'};
+
 
 %Dictionary of expressions
-%dictionary = {'ABCD EFGH IJKY', 'ABCD EFGH IJKX', 'ABCD EFGH IJKZ', 'ABCD EFGH IJKQ','ABCD','EFGH','IJKY','IJKX','IJKZ','IJKQ','A','B','C','D','E','F','G','H','I','J','K','Y','X','Z','Q'};
 dictionary = {'ABCD EFKL IJMN', 'ABCD EFOP IJQR', 'ABCD EFST IJUV', 'ABCD EFWX IJYZ','ABCD','EFKL','IJMN','EFOP','IJQR','EFST','IJUV','EFWX','IJYZ','A','B','C','D','E','F','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+%dictionary = {'ABCD EFGH IJKY', 'ABCD EFGH IJKX', 'ABCD EFGH IJKZ', 'ABCD EFGH IJKQ','ABCD','EFGH','IJKY','IJKX','IJKZ','IJKQ','A','B','C','D','E','F','G','H','I','J','K','Y','X','Z','Q'};
 
 [accuracy,abstraction_frequency,expression_usage,sentenceIdx,wordIdx,letterIdx] = fun_Coordination(T,D,beta,Bias,action,dictionary);
 
@@ -110,3 +111,4 @@ han.XLabel.Visible = 'on';
 xlabel('Dyads')
 han.YLabel.Visible = 'on';
 ylabel('Frequency of expression used in a dyad')
+

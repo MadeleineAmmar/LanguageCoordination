@@ -6,4 +6,4 @@ The simulation framework is based on McCarthy et al., (2021), arXiv:2107.
 1. Clone this repository
 2. Open Matlab or Octave 
 3. Run script LanguageActionCoordination (approximate running time ~5min, creates two figures)
-  2.1. To explore different assumptions affecting the interaction of the 'architect-builder dyad' open script LanguageActionCoordination and change 'Bias' (switch between 0 (=random sampling) and 1(weighted sampling)). To explore the effect of procedural tasks switch between options provided for the 'action'+'dictionary' pair.     
+  2.1. To explore different assumptions affecting the interaction of the 'architect-builder dyad' open script LanguageActionCoordination and change 'Bias' (switch between 0 (=random sampling) and 1 (=weighted sampling)). To explore the effect of procedural tasks switch between options provided for the 'action'+'dictionary' pair.     
